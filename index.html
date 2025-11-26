@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptación Hill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encriptación Hill</h1>
+        
+        <div class="section">
+            <label for="mensaje">Mensaje (máx. 30 caracteres)</label>
+            <textarea id="mensaje" maxlength="30" placeholder="Escribe tu mensaje aquí..."></textarea>
+            <div class="char-count">0/30</div>
+        </div>
+
+        <div class="section">
+            <h3>Matriz del mensaje</h3>
+            <div id="matrizMensaje" class="matriz-display"></div>
+        </div>
+
+        <div class="section">
+            <h3>Matriz clave (2x2)</h3>
+            <div class="matriz-input">
+                <input type="number" id="k11" placeholder="a">
+                <input type="number" id="k12" placeholder="b">
+                <input type="number" id="k21" placeholder="c">
+                <input type="number" id="k22" placeholder="d">
+            </div>
+        </div>
+
+        <button id="encriptar">Encriptar</button>
+        <button id="desencriptar" class="btn-desencriptar">Desencriptar</button>
+
+        <div class="section">
+            <h3>Resultado</h3>
+            <div id="resultado" class="resultado-box"></div>
+
+            <!-- 🎓 TUS DATOS EN LA PARTE INFERIOR DEL RESULTADO -->
+            <div class="datos-tabla">
+                <p><strong>Nombre:</strong> Cristopher M. Euan Pool</p>
+                <p><strong>Escuela:</strong> Tec de Software</p>
+                <p><strong>Grupo:</strong> 1 "A"</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
